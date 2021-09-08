@@ -41,10 +41,10 @@ const InfoCard = ({
           </p>
           <div className="flex flex-col">
             <p className="text-lg lg:text-xl font-semibold pb-2">
-              {price}
+              {price.replace("£","$")}
             </p>
             <p className="text-right font-extralight">
-              {total}
+              {total.replace("£","$")}
             </p>
           </div>
         </div>
