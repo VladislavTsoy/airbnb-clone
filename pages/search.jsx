@@ -4,6 +4,7 @@ import React from 'react';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import InfoCard from '../components/InfoCard/InfoCard';
+import Map from '../components/Map/Map';
 
 // utils
 import { searchFilterButtons } from '../utils/constants';
@@ -24,8 +25,6 @@ const Search = ({ searchResults }) => {
   }
 
   const range = `${formatDate(startDate)} - ${formatDate(endDate)}`;
-
-  console.log(searchResults)
 
   return (
     <div>
@@ -55,6 +54,9 @@ const Search = ({ searchResults }) => {
                 {...item}/>
             ))}
           </div>
+        </section>
+        <section className="hidden xl:inline-flex xl:min-w-[600px]">
+          <Map searchResults={searchResults}/>
         </section>
       </main>
       <Footer />
